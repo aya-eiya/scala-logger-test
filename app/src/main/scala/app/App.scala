@@ -3,25 +3,17 @@
  */
 package app
 
-
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import com.typesafe.scalalogging.LazyLogging
 
 object App extends LazyLogging {
   import logger._
-  val log = LoggerFactory.getLogger(classOf[App])
 
   def main(args: Array[String]): Unit = {
-    println(logger)
-    log.info("log here")
-    log.debug("log here")
-    log.error("log here")
-    log.warn("log here")
-    info(greeting())
-    error(greeting())
-    debug(greeting())
+    debug(greeting)
+    info(greeting)
+    warn(greeting)
+    error(greeting)
   }
 
-  def greeting(): String = "Hello, world!"
+  def greeting: String = "Hello, world!"
 }
